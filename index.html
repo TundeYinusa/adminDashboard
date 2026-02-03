@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main class="main" id="main">
+
+        <div class="sidebar" id="sidebar">
+
+            <div class="logo">
+               <p>Dashboard</p>
+            </div>
+
+            <ul class="navigation">
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-solid fa-boxes-stacked"></i> Products</li>
+                <li><i class="fa-solid fa-user"></i> Customers</li>
+                <li><i class="fa-solid fa-chart-simple"></i> Stats</li>
+                <li><i class="fa-regular fa-user"></i> New Clients</li>
+                <li><i class="fa-solid fa-money-bill"></i> Refunds</li>
+            </ul>
+            
+
+        </div>
+
+
+
+        <div class="main-area" id="main-area">
+
+            <!-- header  -->
+
+            <header class="header">
+
+                <div class="intro">
+                    <h1>Welcome back, Yunus</h1>
+                </div>
+
+                <div class="profile">
+                    <img src="data:image/jpeg;base64,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" alt="profile">
+                    <p>Yunus</p>
+                    <p>Logout</p>
+                    <p><i id="light-mode" class="fa-solid fa-sun" style="color: yellow;" title="Switch To Light Mode"></i></p>
+                    <p style="display: none;"><i id="dark-mode" class="fa-solid fa-moon" style="color: darkgray" title="Switch To Night Mode"></i></p>
+                </div>
+
+            </header>
+
+
+            <!-- stats area  -->
+
+            <div class="stats">
+
+                <div class="stat box">
+
+                    <p>
+                        <i class="fa-solid fa-dollar-sign"></i> Total Sales
+                    </p>
+
+                    <h1><i class="fa-solid fa-dollar-sign"></i> 20,50000</h1>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color:green"></i> 20% More Than Last Month
+                    </p>
+
+                </div>
+
+                <div class="stat box">
+
+                    <p>
+                        <i class="fa-solid fa-dollar-sign"></i> Total Revenue
+                    </p>
+
+                    <h1><i class="fa-solid fa-dollar-sign"></i> 10,5000</h1>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color:green"></i> 10% More Than Last Month
+                    </p>
+
+                </div>
+
+                <div class="stat box">
+
+                    <p>
+                        <i class="fa-solid fa-dollar-sign"></i> New Customers Joined
+                    </p>
+
+                    <h1><i class="fa-solid fa-dollar-sign"></i> 3,010</h1>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-trend-down" style="color:red"></i> 50% Less Than Last Month
+                    </p>
+
+                </div>
+
+
+                <div class="stat box">
+
+                    <p>
+                        <i class="fa-solid fa-dollar-sign"></i> Old Client Funds
+                    </p>
+
+                    <h1><i class="fa-solid fa-dollar-sign"></i> 30,00000</h1>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color:green"></i> 10% More Than Last Month
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- chart area  -->
+
+            <div class="charts">
+                <div class="line-chart box">
+
+                    <canvas id="linechart"></canvas>
+
+                </div>
+
+                <div class="polar-area box">
+                    <canvas id="polararea"></canvas>
+                </div>
+
+                <div class="doughnut-chart box">
+                    <canvas id="doughnutchart"></canvas>
+                </div>
+            </div>
+
+
+            <!-- top products area  -->
+
+            <div class="products box">
+
+                <h1>Top Products This Month</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Vendor</th>
+                            <th>Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Samsung Galaxy M51</td>
+                            <td>23000</td>
+                            <td>145</td>
+                            <td>Samsung</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Apple Iphone 14</td>
+                            <td>23000</td>
+                            <td>145</td>
+                            <td>Apple</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>LG HD OLED</td>
+                            <td>23000</td>
+                            <td>145</td>
+                            <td>LG</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+   
+    
+</body>
+</html>
